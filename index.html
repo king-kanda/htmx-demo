@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/htmx.org"></script> <!-- Ensure the correct HTMX library is loaded -->
+    <title>HTMX Example</title>
+</head>
+<body>
+    <!-- Display Heading -->
+    <h1>Get Users</h1>
+
+    <!-- Button to Trigger the GET Request -->
+    <button 
+        hx-get="http://localhost:8000/api/users" 
+        hx-target="#result" 
+        hx-swap="innerHTML">
+        Get Some HTML
+    </button>
+
+    <!-- Placeholder to display the fetched content -->
+    <div id="result">
+        <!-- Fetched data will be displayed here -->
+    </div>
+</body>
+</html>
